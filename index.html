@@ -13,16 +13,17 @@
 <body>
     <section class="main-container">
         <div class="musicbox">
-            <img class="musicbox_img" src="https://images.pexels.com/photos/894156/pexels-photo-894156.jpeg" alt="singer">
+            <img class="musicbox_img" src="https://i1.sndcdn.com/artworks-000300249612-tt0oxz-t500x500.jpg" alt="singer">
             <div>
-                <p class="musicbox_text--primary-bold">FIND MY WAY</p>
-                <p class="musicbox_text--secondary-regular">DaBaby</p>
+                <p class="musicbox_text--primary-bold">PHOTOGRAPH</p>
+                <p class="musicbox_text--secondary-regular">Ed Sheeran</p>
             </div>
+            <audio src="./assets/Photograph.mp3" id="audio"></audio>
             <div>
                 <input type="range" id="range-slider" value="0" min="0" max="100" class="player-progress">
                 <div class="musicbox_song-time">
                     <span id="song-start">0:00</span>
-                    <span id="song-duration">3:51</span>
+                    <span id="song-duration">0:00</span>
                 </div>
             </div>
             <div class="control-buttons-container">
@@ -32,8 +33,11 @@
                 <button>
                     <img src="./assets/arrowBack.svg" alt="">
                 </button>
-                <button>
+                <button id="play-button">
                     <img src="./assets/button3.svg" alt="">
+                </button>
+                <button id="pause-button" class="hide">
+                    <img src="./assets/pausebtn.svg" alt="">
                 </button>
                 <button>
                     <img src="./assets/arrowForward.svg" alt="">

@@ -10,6 +10,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.hide {
+    display: none;
+}
+/* musicbox */
+
 .musicbox {
     background-color: white;
     width: 280px;
@@ -95,9 +100,18 @@
     border-radius: 50%;
     border:none;
     background-color: white;
+    cursor: pointer;
 }
 
 .control-buttons-container button:nth-child(3) img{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: none;
+    object-position: 50% 25%;
+}
+
+.control-buttons-container button:nth-child(4) img{
     width: 56px;
     height: 56px;
     border-radius: 50%;
