@@ -41,8 +41,50 @@
     color: gray;
     text-align: center;
     margin-top: 15px;
+    margin-bottom: 0;
 }
 
+.player-progress {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 248px;
+    cursor: pointer;
+    outline: none;
+    background: #D8D8D8;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.player-progress::-moz-range-track {
+    height: 4px;
+    border-radius: 2px;
+    background: #D8D8D8;
+}
+
+.player-progress::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #8643FF;
+    transition: .2s ease-in-out;
+}
+
+.player-progress::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 10px rgba(140, 0, 255, 0.1);
+}
+
+.musicbox_song-time {
+    display: flex;
+    width: 248px;
+    justify-content: space-between;
+}
+
+.musicbox_song-time span {
+    font-size: 0.8em;
+    color: gray;
+}
 .control-buttons-container {
     display: flex;
     flex-direction: row;
