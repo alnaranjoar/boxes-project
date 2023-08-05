@@ -7,6 +7,8 @@ const songDuration=document.getElementById('song-duration')
 
 rangeSlider.addEventListener('input',progressScript)
 rangeSlider.addEventListener('input',songSliderControl)
+rangeSlider.addEventListener('mousedown',sliderSongPause)
+rangeSlider.addEventListener('mouseup',sliderSongPlay)
 playButton.addEventListener('click',playSong)
 pauseButton.addEventListener('click',pauseSong)
 
@@ -57,7 +59,14 @@ function progressScript() {
 }
 
 function songSliderControl() {
-    song.pause()
     song.currentTime = rangeSlider.value
 }
 
+function sliderSongPause() {
+    console.log('pauseclick')
+    song.pause()
+}
+
+function sliderSongPlay() {
+    song.play()
+}
