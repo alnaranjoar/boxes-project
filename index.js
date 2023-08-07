@@ -66,6 +66,7 @@ function loadSongHtml () {
 
 function playSong() {
     intervalo = setInterval(songTimeUpdater,50)
+    checkEnded = setInterval(automaticNextSong,50)
     audio.play()
     playButton.classList.add('hide')
     pauseButton.classList.remove('hide')
@@ -93,7 +94,6 @@ function pauseSong() {
 function songTime() {
     
     let songDurationSecs = audio.duration
-    console.log(songDurationSecs)
     rangeSlider.max = songDurationSecs
 
     let minute = Math.floor((songDurationSecs / 60) % 60)
@@ -135,12 +135,20 @@ function previousSong() {
     audio.pause()
     songIndex > 0 ? songIndex = songIndex - 1 : songIndex = 0
     loadSongHtml()
-    audio.play()
+    playSong()
 }
 
 function nextSong() {
     audio.pause()
     songIndex < songs.length - 1 ? songIndex = songIndex + 1 : songIndex = songs.length - 1
     loadSongHtml()
-    audio.play()
+    playSong()
+}
+
+function automaticNextSong() {
+    if (audio.ended) {
+        songIndex < songs.length - 1 ? songIndex = songIndex + 1 : songIndex = 0
+        loadSongHtml()
+        playSong()
+    }
 }
