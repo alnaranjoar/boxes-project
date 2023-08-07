@@ -13,24 +13,29 @@
 <body>
     <section class="main-container">
         <div class="musicbox">
-            <img class="musicbox_img" src="https://i1.sndcdn.com/artworks-000300249612-tt0oxz-t500x500.jpg" alt="singer">
-            <div>
-                <p class="musicbox_text--primary-bold">PHOTOGRAPH</p>
-                <p class="musicbox_text--secondary-regular">Ed Sheeran</p>
+            <div class="song-information">
+                <div class="song-information-container">
+                    <img class="musicbox_img" src="" alt="singer">
+                    <div>
+                        <p class="musicbox_text--primary-bold"></p>
+                        <p class="musicbox_text--secondary-regular"></p>
+                    </div>
+                    <audio class="audio" src=""></audio>
+                </div>
+    
             </div>
-            <audio src="./assets/Photograph.mp3" id="audio"></audio>
             <div>
                 <input type="range" id="range-slider" value="0" min="0" max="100" class="player-progress">
                 <div class="musicbox_song-time">
                     <span id="song-start">0:00</span>
-                    <span id="song-duration">0:00</span>
+                    <span id="song-duration"></span>
                 </div>
             </div>
             <div class="control-buttons-container">
-                <button>
+                <button id="previous-song">
                     <img src="./assets/arrowPrevious.svg" alt="">
                 </button>
-                <button>
+                <button id="back-button">
                     <img src="./assets/arrowBack.svg" alt="">
                 </button>
                 <button id="play-button">
@@ -39,10 +44,10 @@
                 <button id="pause-button" class="hide">
                     <img src="./assets/pausebtn.svg" alt="">
                 </button>
-                <button>
+                <button id="forward-button">
                     <img src="./assets/arrowForward.svg" alt="">
                 </button>
-                <button>
+                <button id="next-song">
                     <img src="./assets/arrowNext.svg" alt="">
                 </button>
             </div>

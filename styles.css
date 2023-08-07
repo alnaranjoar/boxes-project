@@ -23,11 +23,12 @@
     flex-direction: column;
     align-items: center;
     border-radius: 32px;
+    padding: 0 16px;
+    box-sizing: border-box;
 }
 
 .musicbox_img {
-    width: 248px;
-    height: 248px;
+    width: 100%;
     object-fit: cover;
     border-radius: 20px;
     margin-top: 16px;
@@ -52,7 +53,7 @@
 .player-progress {
     appearance: none;
     -webkit-appearance: none;
-    width: 248px;
+    width: 100%;
     cursor: pointer;
     outline: none;
     background: #D8D8D8;
