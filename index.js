@@ -25,6 +25,16 @@ forwardBtn.addEventListener('click', forwardSong)
 previousBtn.addEventListener('click', previousSong)
 nextBtn.addEventListener('click',nextSong)
 
+//little musicbox section
+const littleCover = document.querySelector('.little-musicbox_img')
+const littleSongName = document.querySelector('.little-musicbox_text--primary-bold')
+const littleArtist = document.querySelector('.little-musicbox_text--secondary-regular')
+const littlePlayBtn = document.querySelector('#little-play-button')
+const littlePauseBtn = document.querySelector('#little-pause-button')
+
+littlePlayBtn.addEventListener('click',playSong)
+littlePauseBtn.addEventListener('click',pauseSong)
+
 songs = [
     {
         name: 'PHOTOGRAPH',
@@ -56,8 +66,11 @@ loadSongHtml()
 
 function loadSongHtml () {
     cover.src = songs[songIndex].img
+    littleCover.src = songs[songIndex].img
     songName.innerHTML = songs[songIndex].name
+    littleSongName.innerHTML = songs[songIndex].name
     artist.innerHTML = songs[songIndex].artist
+    littleArtist.innerHTML = songs[songIndex].artist
     audio.src = songs[songIndex].file
     songStart.innerHTML = '0:00'
     
@@ -69,7 +82,9 @@ function playSong() {
     checkEnded = setInterval(automaticNextSong,50)
     audio.play()
     playButton.classList.add('hide')
+    littlePlayBtn.classList.add('hide')
     pauseButton.classList.remove('hide')
+    littlePauseBtn.classList.remove('hide')
 }
 
 function songTimeUpdater() {
@@ -88,7 +103,9 @@ function pauseSong() {
     clearInterval(intervalo)
     audio.pause()
     playButton.classList.remove('hide')
+    littlePlayBtn.classList.remove('hide')
     pauseButton.classList.add('hide')
+    littlePauseBtn.classList.add('hide')
 }
 
 function songTime() {

@@ -3,9 +3,8 @@
 
 .main-container {
     background-color:aliceblue;
-    display: grid;
-    grid-template-columns: 1fr, 1fr, 1fr, 1fr;
-    grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+    display: flex;
+    gap: 40px;
     padding: 2em;
     font-family: 'Poppins', sans-serif;
 }
@@ -13,6 +12,8 @@
 .hide {
     display: none;
 }
+
+
 /* musicbox */
 
 .musicbox {
@@ -91,6 +92,7 @@
     font-size: 0.8em;
     color: gray;
 }
+
 .control-buttons-container {
     display: flex;
     flex-direction: row;
@@ -118,4 +120,59 @@
     border-radius: 50%;
     object-fit: none;
     object-position: 50% 25%;
+}
+
+/* little-musicbox */
+
+.little-musicbox {
+    background-color: white;
+    width: 342px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 24px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.little-musicbox_img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-right: 16px;
+}
+
+.litte-musicbox-buttons-container button{
+    border-radius: 50%;
+    border:none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.litte-musicbox-buttons-container button img{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: none;
+    object-position: 50% 25%;
+    margin-right: 17px;
+}
+
+.little-song-information-container {
+    width: 165px;
+}
+
+.little-musicbox_text--primary-bold {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.little-musicbox_text--secondary-regular {
+    font-size: 12px;
+    color: gray;
+    text-align: left;
+    margin-top: 0;
 }
