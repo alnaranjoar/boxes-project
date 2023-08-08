@@ -18,12 +18,15 @@
 
     .painted {
         background-color: #4136F1;
+        color: white;
+        font-weight: 500;
+        transition: .2s ease-in-out;
     }
 
     .calendar {
         background-color: white;
         width: 420px;
-        height: 300px;
+        height:fit-content;
         text-align: center;
         border-radius: 32px;
         padding: 20px;
@@ -40,6 +43,7 @@
 
     .calendar_info div {
         margin: 0 20px;
+        width: 150px;
     }
 
     .calendar ol {
@@ -63,6 +67,7 @@
 
     .calendar_dates li:hover {
         box-shadow: 0 0 0 5px rgba(140, 0, 255, 0.1);
+        transition: .2s ease-in-out;
     }
 
     .calendar_day {
@@ -84,3 +89,10 @@
         cursor: pointer;
     }
 
+    .previous-month, .next-month {
+        color: #D8D8D8;
+    }
+
+    #days-list {
+        margin-bottom: 0;
+    }
