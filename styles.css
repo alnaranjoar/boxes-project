@@ -1,9 +1,15 @@
     /* font-family: 'Bebas Neue', sans-serif;
     font-family: 'Poppins', sans-serif; */
 
-.main-container {
-    background-color:aliceblue;
-    display: grid;
-    grid-template-columns: 1fr, 1fr, 1fr, 1fr;
-    grid-template-rows: 1fr, 1fr, 1fr, 1fr;
-}
+    .main-container {
+        background-color:black;
+        display: flex;
+        gap: 40px;
+        padding: 2em;
+        font-family: 'Poppins', sans-serif;
+        height: 100vh;
+    }
+    
+    .hide {
+        display: none;
+    }
