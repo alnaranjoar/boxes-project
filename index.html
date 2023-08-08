@@ -12,33 +12,36 @@
 </head>
 <body>
     <section class="main-container">
-        <section class="calendar">
-            <div class="calendar_info">
-                <button class="calendar_previous-month-btn">
-                    <img src="./assets/arrowThinLeft.svg" alt="">
-                </button>
-                <div>
-                    <span class="calendar_month"  id="month"></span>
-                    <span class="calendar_year" id="year"></span>
+        <section class="calendar-container">
+            <input type="text" class="calendar-input" placeholder="dd/mm/yyyy" disabled>
+            <div class="calendar">
+                <div class="calendar_info">
+                    <button class="calendar_previous-month-btn">
+                        <img src="./assets/arrowThinLeft.svg" alt="">
+                    </button>
+                    <div>
+                        <span class="calendar_month"  id="month"></span>
+                        <span class="calendar_year" id="year"></span>
+                    </div>
+                    <button class="calendar_next-month-btn">
+                        <img src="./assets/arrowThinRight.svg" alt="">
+                    </button>
                 </div>
-                <button class="calendar_next-month-btn">
-                    <img src="./assets/arrowThinRight.svg" alt="">
-                </button>
-            </div>
-            <div class="calendar_week">
-                <ol>
-                    <li class="calendar_day">S</li>
-                    <li class="calendar_day">M</li>
-                    <li class="calendar_day">T</li>
-                    <li class="calendar_day">W</li>
-                    <li class="calendar_day">T</li>
-                    <li class="calendar_day">F</li>
-                    <li class="calendar_day">S</li>
-                </ol>
-            </div>
-            <div class="calendar_dates">
-                <ol id="days-list">
-                </ol>
+                <div class="calendar_week">
+                    <ol>
+                        <li class="calendar_day">S</li>
+                        <li class="calendar_day">M</li>
+                        <li class="calendar_day">T</li>
+                        <li class="calendar_day">W</li>
+                        <li class="calendar_day">T</li>
+                        <li class="calendar_day">F</li>
+                        <li class="calendar_day">S</li>
+                    </ol>
+                </div>
+                <div class="calendar_dates">
+                    <ol id="days-list">
+                    </ol>
+                </div>
             </div>
         </section>
     </section>

@@ -23,6 +23,24 @@
         transition: .2s ease-in-out;
     }
 
+    .calendar-container {
+        background-color: white;
+        width: fit-content;
+        height:fit-content;
+        text-align: center;
+        border-radius: 32px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    .calendar-input {
+        font-family: 'Poppins', sans-serif;
+        border: none;
+        background-color: #D8D8D8;
+        border-radius: 20px;
+        height: 30px;
+        text-align: center;
+    }
     .calendar {
         background-color: white;
         width: 420px;
@@ -39,6 +57,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        user-select: none;
     }
 
     .calendar_info div {
@@ -53,6 +72,7 @@
         padding: 0;
         font-size: 14px;
         justify-items: center;
+        user-select: none;
     }
 
     .calendar ol li{
