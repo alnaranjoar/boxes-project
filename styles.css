@@ -2,11 +2,12 @@
     font-family: 'Poppins', sans-serif; */
 
 .main-container {
-    background-color:aliceblue;
+    background-color:black;
     display: flex;
     gap: 40px;
     padding: 2em;
     font-family: 'Poppins', sans-serif;
+    height: 100vh;
 }
 
 .hide {
