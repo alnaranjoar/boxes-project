@@ -8,9 +8,65 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
+    <script src="./index.js" defer></script>
 </head>
 <body>
     <section class="main-container">
+        <div class="musicbox">
+            <div class="song-information">
+                <div class="song-information-container">
+                    <img class="musicbox_img" src="" alt="singer">
+                    <div>
+                        <p class="musicbox_text--primary-bold"></p>
+                        <p class="musicbox_text--secondary-regular"></p>
+                    </div>
+                    <audio class="audio" src=""></audio>
+                </div>
+    
+            </div>
+            <div>
+                <input type="range" id="range-slider" value="0" min="0" max="100" class="player-progress">
+                <div class="musicbox_song-time">
+                    <span id="song-start">0:00</span>
+                    <span id="song-duration"></span>
+                </div>
+            </div>
+            <div class="control-buttons-container">
+                <button id="previous-song">
+                    <img src="./assets/arrowPrevious.svg" alt="">
+                </button>
+                <button id="back-button">
+                    <img src="./assets/arrowBack.svg" alt="">
+                </button>
+                <button id="play-button">
+                    <img src="./assets/button3.svg" alt="">
+                </button>
+                <button id="pause-button" class="hide">
+                    <img src="./assets/pausebtn.svg" alt="">
+                </button>
+                <button id="forward-button">
+                    <img src="./assets/arrowForward.svg" alt="">
+                </button>
+                <button id="next-song">
+                    <img src="./assets/arrowNext.svg" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="little-musicbox">
+            <img class="little-musicbox_img" src="https://i1.sndcdn.com/artworks-000300249612-tt0oxz-t500x500.jpg" alt="">
+            <div class="little-song-information-container">
+                <p class="little-musicbox_text--primary-bold">SONG NAME</p>
+                <p class="little-musicbox_text--secondary-regular">artist</p>     
+            </div>
+            <div class="litte-musicbox-buttons-container">
+                <button id="little-play-button">
+                    <img src="./assets/button3.svg" alt="">
+                </button>
+                <button id="little-pause-button" class="hide">
+                    <img src="./assets/pausebtn.svg" alt="">
+                </button>
+            </div>
+        </div>
     </section>
 </body>
 </html>
