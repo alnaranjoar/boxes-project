@@ -5,9 +5,10 @@ body {
     margin: 0;
 }
 
-    .main-container {
+.main-container {
     background-color:black;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
     padding: 2em;
     box-sizing: border-box;
@@ -152,6 +153,50 @@ body {
     padding: 0;
 }
 
+
+/* general little boxes */
+
+.little-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    gap: 40px;
+}
+
+.little-boxes_text--primary-bold {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.little-boxes_text--secondary-regular {
+    font-size: 12px;
+    color: gray;
+    text-align: left;
+    margin-top: 0;
+}
+
+.little-boxes_img-text-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.lt-box {
+    background-color: white;
+    width: 342px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 24px;
+    padding: 8px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
 /* little-musicbox */
 
 .little-musicbox {
@@ -165,11 +210,6 @@ body {
     padding: 8px;
     box-sizing: border-box;
     justify-content: space-between;
-}
-
-.little-musicbox div:first-child {
-    height: 100%;
-    display: flex;
 }
 
 .little-musicbox_img {
@@ -199,21 +239,42 @@ body {
     margin-right: 0;
 }
 
+/* friendrequest */
 
-
-.little-musicbox_text--primary-bold {
-    font-size: 15px;
-    font-weight: 600;
-    text-align: left;
-    margin-bottom: 0;
+.friendrequest_img {
+    height: 100%;
+    width: 85px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-right: 16px;
 }
 
-.little-musicbox_text--secondary-regular {
-    font-size: 12px;
-    color: gray;
-    text-align: left;
-    margin-top: 0;
+.friendrequest div:first-child {
+    display: flex;
 }
+
+.friendrequest-buttons-container {
+    margin-right: 10px;
+}
+
+.friendrequest-buttons-container button {
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 12px;
+    padding: 0;
+    cursor: pointer;
+}
+
+#friendrequest_decline-btn {
+    margin-right: 5px;
+    background-color: #f5dddd;
+}
+
+#friendrequest_accept-btn {
+    background-color: #ecfdec;
+}
+
 
 
 /* calendar */

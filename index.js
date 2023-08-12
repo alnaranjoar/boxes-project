@@ -27,8 +27,8 @@ nextBtn.addEventListener('click',nextSong)
 
 //little musicbox section
 const littleCover = document.querySelector('.little-musicbox_img')
-const littleSongName = document.querySelector('.little-musicbox_text--primary-bold')
-const littleArtist = document.querySelector('.little-musicbox_text--secondary-regular')
+const littleSongName = document.querySelector('#song-name')
+const littleArtist = document.querySelector('#artist')
 const littlePlayBtn = document.querySelector('#little-play-button')
 const littlePauseBtn = document.querySelector('#little-pause-button')
 

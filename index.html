@@ -52,21 +52,47 @@
                 </button>
             </div>
         </section>
-        <section class="little-musicbox">
-            <div>
-                <img class="little-musicbox_img" src="https://i1.sndcdn.com/artworks-000300249612-tt0oxz-t500x500.jpg" alt="">
-                <div class="little-song-information-container">
-                    <p class="little-musicbox_text--primary-bold">SONG NAME</p>
-                    <p class="little-musicbox_text--secondary-regular">artist</p>     
+        
+        <section class="little-boxes">
+            <div class="little-musicbox">
+                <div class="little-boxes_img-text-container">
+                    <img class="little-musicbox_img" src="https://i1.sndcdn.com/artworks-000300249612-tt0oxz-t500x500.jpg" alt="">
+                    <div class="little-song-information-container">
+                        <p class="little-boxes_text--primary-bold" id="song-name">SONG NAME</p>
+                        <p class="little-boxes_text--secondary-regular" id="artist">artist</p>     
+                    </div>
+                </div>
+                <div class="little-musicbox-buttons-container">
+                    <button id="little-play-button">
+                        <img src="./assets/button3.svg" alt="">
+                    </button>
+                    <button id="little-pause-button" class="hide">
+                        <img src="./assets/pausebtn.svg" alt="">
+                    </button>
                 </div>
             </div>
-            <div class="little-musicbox-buttons-container">
-                <button id="little-play-button">
-                    <img src="./assets/button3.svg" alt="">
-                </button>
-                <button id="little-pause-button" class="hide">
-                    <img src="./assets/pausebtn.svg" alt="">
-                </button>
+            <div class="friendrequest lt-box">
+                <div class="little-boxes_img-text-container">
+                    <img class="friendrequest_img" src="https://www.atptour.com/-/media/images/news/2023/07/09/14/55/federer-wimbledon-2023-visit.jpg" alt="">
+                    <div class="friendrequest-info-container">
+                        <p class="little-boxes_text--primary-bold">Roger Federer</p>
+                        <p class="little-boxes_text--secondary-regular">Friend request</p>     
+                    </div>
+                </div>
+                <div class="friendrequest-buttons-container">
+                    <button id="friendrequest_decline-btn">
+                        <img src="./assets/x.svg" alt="">
+                    </button>
+                    <button id="friendrequest_accept-btn">
+                        <img src="./assets/check.svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="pizzeria lt-box">
+
+            </div>
+            <div class="coffeemug lt-box">
+
             </div>
         </section>
         <section class="calendar-container">
