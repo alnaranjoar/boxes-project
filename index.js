@@ -74,7 +74,7 @@ function loadSongHtml () {
     audio.src = songs[songIndex].file
     songStart.innerHTML = '0:00'
     
-    setTimeout(songTime,200)
+    setTimeout(songTime,400)
 }
 
 function playSong() {

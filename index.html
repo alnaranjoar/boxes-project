@@ -24,7 +24,7 @@
                 </div>
     
             </div>
-            <div>
+            <div class="song-progress-container">
                 <input type="range" id="range-slider" value="0" min="0" max="100" class="player-progress">
                 <div class="musicbox_song-time">
                     <span id="song-start">0:00</span>
@@ -32,10 +32,10 @@
                 </div>
             </div>
             <div class="control-buttons-container">
-                <button id="previous-song">
+                <button id="previous-song" class="control-btn">
                     <img src="./assets/arrowPrevious.svg" alt="">
                 </button>
-                <button id="back-button">
+                <button id="back-button" class="control-btn">
                     <img src="./assets/arrowBack.svg" alt="">
                 </button>
                 <button id="play-button">
@@ -44,21 +44,23 @@
                 <button id="pause-button" class="hide">
                     <img src="./assets/pausebtn.svg" alt="">
                 </button>
-                <button id="forward-button">
+                <button id="forward-button" class="control-btn">
                     <img src="./assets/arrowForward.svg" alt="">
                 </button>
-                <button id="next-song">
+                <button id="next-song" class="control-btn">
                     <img src="./assets/arrowNext.svg" alt="">
                 </button>
             </div>
         </section>
         <section class="little-musicbox">
-            <img class="little-musicbox_img" src="https://i1.sndcdn.com/artworks-000300249612-tt0oxz-t500x500.jpg" alt="">
-            <div class="little-song-information-container">
-                <p class="little-musicbox_text--primary-bold">SONG NAME</p>
-                <p class="little-musicbox_text--secondary-regular">artist</p>     
+            <div>
+                <img class="little-musicbox_img" src="https://i1.sndcdn.com/artworks-000300249612-tt0oxz-t500x500.jpg" alt="">
+                <div class="little-song-information-container">
+                    <p class="little-musicbox_text--primary-bold">SONG NAME</p>
+                    <p class="little-musicbox_text--secondary-regular">artist</p>     
+                </div>
             </div>
-            <div class="litte-musicbox-buttons-container">
+            <div class="little-musicbox-buttons-container">
                 <button id="little-play-button">
                     <img src="./assets/button3.svg" alt="">
                 </button>
