@@ -300,6 +300,41 @@ body {
     cursor: pointer;
 }
 
+.friends-list {
+    width: 115%;
+    position: absolute;
+    right: 0;
+    top: 18px;
+    background: white;
+    z-index: 1;
+    min-height: 100px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 10px 20px 20px 20px;
+}
+
+.friends-list > p {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    
+}
+
+.friend {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 5px;
+}
+
+.friend img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 15px;
+}
 /* pizzeria */
 
 .pizzeria_text--secondary-regular {
@@ -501,9 +536,5 @@ body {
     .little-boxes::-webkit-scrollbar-thumb {
         background-color: #797979;
         border-radius: 20px;
-    }
-
-    .lt-box {
-        width: 300px;
     }
 }

@@ -335,9 +335,91 @@ window.addEventListener('load', initializeCalendar)
 
 //little-boxes
 
+//friend request
+
 const declineBtn = document.querySelector('#friendrequest_decline-btn')
 const acceptBtn = document.querySelector('#friendrequest_accept-btn')
 const friendReqImg = document.querySelector('#friendrequest_img')
 const friendReqName = document.querySelector('#friendrequest_name')
 const friendReqType = document.querySelector('#friendrequest_type')
+const displayFriendsBtn = document.querySelector('.display-friends-btn')
+const friendsList = document.querySelector('.friends-list')
+const friendReqCont = document.querySelector('#friendrequest-global-container')
+const friendReqBtnCont = document.querySelector('.friendrequest-buttons-container')
+const friendReq = document.querySelector('.friendrequest')
+let friendIndex = 0
 
+let friendsRequests = [
+    {
+        name:'Roger Federer',
+        img:'https://www.atptour.com/-/media/images/news/2023/07/09/14/55/federer-wimbledon-2023-visit.jpg'
+    },
+    
+    {
+        name:'Ed-Sheeran',
+        img:'https://e00-marca.uecdn.es/assets/multimedia/imagenes/2023/05/08/16835686875455.jpg'
+    },
+    
+    {
+        name: 'Lionel Messi',
+        img: 'https://e0.365dm.com/22/12/2048x1152/skysports-lionel-messi-argentina_6000508.jpg'
+    },
+
+    {
+        name: 'Juanpis Gonzalez',
+        img: 'https://ichef.bbci.co.uk/news/640/cpsprodpb/15BDA/production/_123005098_jp_107-sc03_00015_r_.jpg'
+    }
+]
+
+displayFriendsBtn.addEventListener('click', displayFriends)
+acceptBtn.addEventListener('click', addFriend)
+declineBtn.addEventListener('click',declineFriend)
+
+function displayFriends() {
+    friendsList.classList.toggle('hide')
+    friendReqImg.classList.toggle('hide')
+}
+
+function loadFriendRequests() {
+    friendReqImg.src = friendsRequests[friendIndex].img
+    friendReqName.innerText = friendsRequests[friendIndex].name
+}
+
+loadFriendRequests()
+
+function addFriend() {
+    let currentFriendImg = friendReqImg.src
+    let currentFriendName = friendReqName.innerText
+
+    let newFriend = 
+    `
+    <div class="friend">
+        <img src="${currentFriendImg}" alt="" class="friend_photo">
+        <span class="friend_name">${currentFriendName}</span>
+    </div>
+    `
+
+    friendsList.innerHTML += newFriend
+
+    nextRequest()
+
+}
+
+function nextRequest() {
+    if (friendIndex < 3) {
+        friendIndex = friendIndex + 1
+        loadFriendRequests()  
+    } else {
+        friendReqCont.innerHTML= 
+        `
+        <p>No friend requests pending</p>
+        `
+        friendReqCont.style.position = 'static'
+        friendReqBtnCont.classList.add('hide')
+        friendReq.style.justifyContent = 'center'
+    }
+}
+
+function declineFriend() {
+    nextRequest()
+}
