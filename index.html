@@ -55,7 +55,7 @@
         
         <section class="little-boxes">
             <div class="little-musicbox">
-                <div class="little-boxes_img-text-container">
+                <div class="little-musicbox_img-text-container">
                     <img class="little-musicbox_img" src="https://i1.sndcdn.com/artworks-000300249612-tt0oxz-t500x500.jpg" alt="">
                     <div class="little-song-information-container">
                         <p class="little-boxes_text--primary-bold" id="song-name">SONG NAME</p>
@@ -73,11 +73,16 @@
             </div>
             <div class="friendrequest lt-box">
                 <div class="little-boxes_img-text-container">
-                    <img class="friendrequest_img" src="https://www.atptour.com/-/media/images/news/2023/07/09/14/55/federer-wimbledon-2023-visit.jpg" alt="">
+                    <img class="little-boxes_img" id="friendrequest_img" src="https://www.atptour.com/-/media/images/news/2023/07/09/14/55/federer-wimbledon-2023-visit.jpg" alt="">
                     <div class="friendrequest-info-container">
-                        <p class="little-boxes_text--primary-bold">Roger Federer</p>
-                        <p class="little-boxes_text--secondary-regular">Friend request</p>     
+                        <p class="little-boxes_text--primary-bold" id="friendrequest_name">Roger Federer</p>
+                        <p class="little-boxes_text--secondary-regular" id="friendrequest_type">Friend request</p>     
                     </div>
+                </div>
+                <div class="display-friends">
+                    <button>
+                        <img src="./assets/arrowDown.svg" alt="">
+                    </button>
                 </div>
                 <div class="friendrequest-buttons-container">
                     <button id="friendrequest_decline-btn">
@@ -89,10 +94,33 @@
                 </div>
             </div>
             <div class="pizzeria lt-box">
-
+                <div class="little-boxes_img-text-container">
+                    <img class="little-boxes_img" src="https://images.pexels.com/photos/1146760/pexels-photo-1146760.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <div class="pizzeria-info-container">
+                        <p class="little-boxes_text--primary-bold">Papa's pizzeria</p>
+                        <p class="little-boxes_text--secondary-regular pizzeria_text--secondary-regular"><img src="./assets/location.svg" alt=""> 3.2 km</p>     
+                    </div>
+                </div>
+                <div class="pizzeria-buttons-container">
+                    <button id="pizzeria_msg-btn">
+                        <img src="./assets/chat2.svg" alt="">
+                    </button>
+                    <button id="pizzeria_like-btn">
+                        <img src="./assets/heart.svg" alt="">
+                    </button>
+                </div>
             </div>
             <div class="coffeemug lt-box">
-
+                <div class="little-boxes_img-text-container">
+                    <img class="little-boxes_img" src="https://images.pexels.com/photos/2648988/pexels-photo-2648988.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <div class="coffeemug-info-container">
+                        <p class="little-boxes_text--primary-bold">Coffee mug</p>
+                        <p class="little-boxes_text--secondary-regular">Beautiful and durable</p>
+                    </div>
+                </div>
+                <div class="coffemug_priceinfo">
+                    <p>$7.99</p>
+                </div>
             </div>
         </section>
         <section class="calendar-container">

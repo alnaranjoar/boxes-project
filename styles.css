@@ -52,7 +52,7 @@ body {
 }
 
 .musicbox > div:nth-child(2) {
-	width: 100%;
+	width: 80%;
 }
 
 .musicbox_text--primary-bold {
@@ -160,7 +160,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100px 100px;
-    gap: 40px;
+    gap: 80px;
+    justify-items: end;
 }
 
 .little-boxes_text--primary-bold {
@@ -181,12 +182,21 @@ body {
     height: 100%;
     display: flex;
     align-items: center;
+    position: absolute;
+    left: -42px;
 }
 
+.little-boxes_img {
+    height: 85px;
+    width: 85px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-right: 16px;
+}
 
 .lt-box {
     background-color: white;
-    width: 342px;
+    width: 300px;
     height: 100px;
     display: flex;
     flex-direction: row;
@@ -194,7 +204,8 @@ body {
     border-radius: 24px;
     padding: 8px;
     box-sizing: border-box;
-    justify-content: space-between;
+    justify-content: flex-end;
+    position: relative;
 }
 
 /* little-musicbox */
@@ -210,6 +221,13 @@ body {
     padding: 8px;
     box-sizing: border-box;
     justify-content: space-between;
+}
+
+.little-musicbox_img-text-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: .2s ease-in-out;
 }
 
 .little-musicbox_img {
@@ -241,20 +259,12 @@ body {
 
 /* friendrequest */
 
-.friendrequest_img {
-    height: 100%;
-    width: 85px;
-    object-fit: cover;
-    border-radius: 20px;
-    margin-right: 16px;
-}
-
-.friendrequest div:first-child {
-    display: flex;
+.friendrequest {
+    position: relative;
 }
 
 .friendrequest-buttons-container {
-    margin-right: 10px;
+    margin-right: 0;
 }
 
 .friendrequest-buttons-container button {
@@ -275,7 +285,69 @@ body {
     background-color: #ecfdec;
 }
 
+.display-friends {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 15px;
+}
 
+
+.display-friends button {
+    padding: 0;
+    border: 0;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* pizzeria */
+
+.pizzeria_text--secondary-regular {
+    display: flex;
+    align-items: center;
+}
+
+.pizzeria_text--secondary-regular img {
+    margin-right: 4px;
+}
+
+.pizzeria-buttons-container {
+    margin-right: 10px;
+    position: absolute;
+    top: -20px;
+}
+
+.pizzeria-buttons-container button {
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 12px;
+    padding: 0;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 15px 15px 40px -3px rgba(0,0,0,0.11);
+}
+
+.pizzeria-buttons-container button img {
+    height: 15px;
+    width: 15px;
+}
+
+#pizzeria_like-btn {
+    margin-left: 5px;
+}
+
+/* coffeemug */
+
+.coffemug_priceinfo {
+    margin-right: 10px;
+}
+
+.coffemug_priceinfo p{
+    color: #4136F1;
+    font-weight: 600;
+    font-size: 14px;
+}
 
 /* calendar */
 
@@ -385,30 +457,11 @@ body {
 @media(max-width: 600px) {
 
     .main-container {
+        display: flex;
         flex-direction: column;
         align-items: left;
         padding: 0;
         width: 100vw;
-    }
-
-    .musicbox > div:nth-child(2) {
-		width: 100%;
-	}
-
-    .calendar-container {
-        width: 100%;
-    }
-}
-
-
-@media(max-width: 430px) {
-
-    .main-container {
-        width: 100vw;
-    }
-
-    .little-musicbox {
-        width: 100%;
     }
 
     .musicbox {
@@ -421,4 +474,36 @@ body {
         height: 25px;
     }
 
+    .calendar-container {
+        width: 100%;
+    }
+
+    .little-boxes {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: none;
+        width: 100vw;
+        overflow-x: auto;
+        padding-top: 20px;
+    }
+
+    .little-boxes::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+
+    .little-boxes::-webkit-scrollbar-button {
+        display: none;
+    } 
+
+    .little-boxes::-webkit-scrollbar:horizontal {
+        height: 10px;
+    }
+
+    .little-boxes::-webkit-scrollbar-thumb {
+        background-color: #797979;
+        border-radius: 20px;
+    }
+
+    .lt-box {
+        width: 300px;
+    }
 }

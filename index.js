@@ -330,3 +330,14 @@ function setNewDate() {
 }
 
 window.addEventListener('load', initializeCalendar)
+
+//----------------------------------------------------
+
+//little-boxes
+
+const declineBtn = document.querySelector('#friendrequest_decline-btn')
+const acceptBtn = document.querySelector('#friendrequest_accept-btn')
+const friendReqImg = document.querySelector('#friendrequest_img')
+const friendReqName = document.querySelector('#friendrequest_name')
+const friendReqType = document.querySelector('#friendrequest_type')
+
