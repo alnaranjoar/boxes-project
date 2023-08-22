@@ -19,7 +19,7 @@ body {
 }
 
 .hide {
-    display: none;
+    display: none !important;
 }
 
 
@@ -637,4 +637,16 @@ body {
     border-radius: 50%;
     background-color: #8643FF;
     transition: .2s ease-in-out;
+}
+
+.success-msj {
+    width: 240px;
+}
+
+@media(max-width: 600px) {
+
+    .files-card {
+        width: 100%;
+    }
+
 }

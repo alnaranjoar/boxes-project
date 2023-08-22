@@ -431,7 +431,6 @@ function declineFriend() {
 
 const uploadSlider = document.querySelectorAll('.upload-progress')
 
-
 uploadSlider.forEach(slider => {
     slider.addEventListener('input', function () {uploadProgress(slider)})
     updateDownload = setInterval(function() {updateProgress(slider)},500)
@@ -448,7 +447,14 @@ function updateProgress(slider) {
     if (slider.value < 100) {
         slider.value ++
         uploadProgress(slider)
+    } else {
+        setTimeout(function() {deployMsg(slider)},200)
     }
 }
 
-
+function deployMsg(slider) {
+    slider.parentNode.nextSibling.nextSibling.nextSibling.nextSibling.classList.remove('hide')
+    slider.parentNode.classList.add('hide')
+    slider.parentNode.nextSibling.nextSibling.classList.add('hide')
+    clearInterval(updateDownload)
+}
