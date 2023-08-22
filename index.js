@@ -169,6 +169,9 @@ function automaticNextSong() {
         playSong()
     }
 }
+
+//calendar
+
 const months = ['January','Febrary','March','April','May','June','July','August','September','October','November','December']
 const nextMonthBtn = document.querySelector('.calendar_next-month-btn')
 const previousMonthBtn = document.querySelector('.calendar_previous-month-btn')
@@ -423,3 +426,29 @@ function nextRequest() {
 function declineFriend() {
     nextRequest()
 }
+
+//files section
+
+const downloadSlider = document.querySelectorAll('.download-progress')
+
+
+downloadSlider.forEach(slider => {
+    slider.addEventListener('input', function () {downloadProgress(slider)})
+    updateDownload = setInterval(function() {updateProgress(slider)},500)
+})
+
+
+function downloadProgress(slider) {
+    const sliderValue = slider.value;
+    slider.style.background = `linear-gradient(to right, #8643FF ${(sliderValue/slider.max)*100}%, #D8D8D8 ${(sliderValue/slider.max)*100}%)`
+    slider.parentNode.nextSibling.nextSibling.innerHTML = slider.value + "%"
+}
+
+function updateProgress(slider) {
+    if (slider.value < 100) {
+        slider.value ++
+        downloadProgress(slider)
+    }
+}
+
+
