@@ -429,16 +429,16 @@ function declineFriend() {
 
 //files section
 
-const downloadSlider = document.querySelectorAll('.download-progress')
+const uploadSlider = document.querySelectorAll('.upload-progress')
 
 
-downloadSlider.forEach(slider => {
-    slider.addEventListener('input', function () {downloadProgress(slider)})
+uploadSlider.forEach(slider => {
+    slider.addEventListener('input', function () {uploadProgress(slider)})
     updateDownload = setInterval(function() {updateProgress(slider)},500)
 })
 
 
-function downloadProgress(slider) {
+function uploadProgress(slider) {
     const sliderValue = slider.value;
     slider.style.background = `linear-gradient(to right, #8643FF ${(sliderValue/slider.max)*100}%, #D8D8D8 ${(sliderValue/slider.max)*100}%)`
     slider.parentNode.nextSibling.nextSibling.innerHTML = slider.value + "%"
@@ -447,7 +447,7 @@ function downloadProgress(slider) {
 function updateProgress(slider) {
     if (slider.value < 100) {
         slider.value ++
-        downloadProgress(slider)
+        uploadProgress(slider)
     }
 }
 
