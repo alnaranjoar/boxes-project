@@ -458,3 +458,20 @@ function deployMsg(slider) {
     slider.parentNode.nextSibling.nextSibling.classList.add('hide')
     clearInterval(updateDownload)
 }
+
+//payment method
+
+const continueBtn = document.querySelector('.payment-method_btn')
+const inputToogle = document.querySelector('#toogle')
+const divGoogle = document.querySelector('#google-payment')
+
+inputToogle.addEventListener('input',hideGoogle)
+
+function hideGoogle () {
+    
+    if(inputToogle.checked == false) {
+        divGoogle.classList.add('hide')
+    } else {
+        divGoogle.classList.remove('hide')
+    }
+}

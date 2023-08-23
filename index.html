@@ -211,7 +211,7 @@
                     <p class="payment-method_header--title1">New payment method</p>
                 </div>
                 <div class="payment-method_list">
-                    <div>
+                    <div id="visa-payment">
                         <input type="radio" id="visa" name="brand">
                         <label for="visa">
                             <div class="external-input">
@@ -222,7 +222,7 @@
                             <img src="./assets/visa.svg" alt="" id="visa-logo">
                         </label>
                     </div>
-                    <div>
+                    <div id="mastercard-payment">
                         <input type="radio" id="mastercard" name="brand">
                         <label for="mastercard">
                             <div class="external-input">
@@ -233,7 +233,7 @@
                             <img src="./assets/mastercard.svg" alt="" id="mastercard-logo">
                         </label>
                     </div>
-                    <div>
+                    <div id="paypal-payment">
                         <input type="radio" id="paypal" name="brand">
                         <label for="paypal">
                             <div class="external-input">
@@ -244,7 +244,7 @@
                             <img src="./assets/paypal.svg" alt="" id="paypal-logo">
                         </label>
                     </div>
-                    <div>
+                    <div id="google-payment" class="hide">
                         <input type="radio" id="google" name="brand">
                         <label for="google">
                             <div class="external-input">
@@ -256,9 +256,17 @@
                         </label>
                     </div>  
                 </div>
+                <div class="toogle-container">
+                    <input type="checkbox" id="toogle">
+                    <label for="toogle" class="switchtoogle"></label>
+                    <p>Allow payments with google</p>
+                </div>
                 <button class="payment-method_btn">
                     <p>Continue</p>
                 </button>
+            </div>
+            <div class="card-info hide">
+
             </div>
         </section>
     </section>

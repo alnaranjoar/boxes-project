@@ -656,6 +656,7 @@ body {
 .payment-method {
     background-color: white;
     width: 412px;
+    height: 700px;
     border-radius: 32px;
     padding: 24px;
     display: flex;
@@ -686,6 +687,7 @@ body {
 .payment-method_list {
     display: flex;
     flex-direction: column;
+    height: 350px;
 }
 
 .payment-method_list > div {
@@ -753,4 +755,53 @@ body {
     font-size: 18px;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
+}
+
+.toogle-container {
+    margin: 30px 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.switchtoogle {
+    width: 80px;
+    height: 40px;
+    border-radius: 40px;
+    background: white;
+    border: 1px solid #4136F1;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.switchtoogle::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(#8743FF,#4136F1);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transition: .2s all;
+}
+
+#toogle:checked + .switchtoogle::after {
+    transform: translatex(40px);
+    background: white ;
+}
+
+#toogle:checked + .switchtoogle {
+    background: linear-gradient(#8743FF,#4136F1);
+    border: none;
+}
+
+#toogle {
+    display: none;
+}
+
+.card-info {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
 }
