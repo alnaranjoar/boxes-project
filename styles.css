@@ -909,3 +909,11 @@ body {
     height: 190px;
     margin-bottom: 225px;
 }
+
+@media(max-width: 600px) {
+
+    .payment-method {
+        width: 100%;
+    }
+
+}
