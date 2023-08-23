@@ -550,6 +550,7 @@ body {
     align-items: center;
     border-radius: 32px;
     width: 412px;
+    height: 550px;
     padding: 24px;
     box-sizing: border-box;
 }
