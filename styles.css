@@ -745,7 +745,7 @@ body {
     height: 45px;
 }
 
-.payment-method_btn {
+.payment-method_btn, .verification_btn {
     height: 75px;
     width: 100%;
     border-radius: 20px;
@@ -755,6 +755,7 @@ body {
     font-size: 18px;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
+    cursor: pointer;
 }
 
 .toogle-container {
@@ -804,4 +805,59 @@ body {
     width: 80%;
     display: flex;
     flex-direction: column;
+}
+
+.card-info img {
+    height: 60px;
+    margin: 40px 0;
+}
+
+.card-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-info_label {
+    font-size: 18px;
+    font-weight: 500;
+    color: gray;
+}
+
+.card-info_input {
+    margin-bottom: 30px;
+    border: none;
+    background-color: lightgray;
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+#expiration-date_selector {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#expiration-date_selector select {
+    border: none;
+    background-color: lightgray;
+    height: 40px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+#expiration-date_selector span {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0 5px;
+}
+
+#CVV {
+    font-size: 24px;
+    color: gray;
+    margin-bottom: 102px;
 }

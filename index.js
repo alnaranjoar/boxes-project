@@ -464,14 +464,21 @@ function deployMsg(slider) {
 const continueBtn = document.querySelector('.payment-method_btn')
 const inputToogle = document.querySelector('#toogle')
 const divGoogle = document.querySelector('#google-payment')
+const paymentMethodContainer = document.querySelector('.payment-method-container')
+const cardInfoContainer = document.querySelector('.card-info')
 
 inputToogle.addEventListener('input',hideGoogle)
+continueBtn.addEventListener('click',fillCardInfo)
 
 function hideGoogle () {
-    
     if(inputToogle.checked == false) {
         divGoogle.classList.add('hide')
     } else {
         divGoogle.classList.remove('hide')
     }
+}
+
+function fillCardInfo() {
+    paymentMethodContainer.classList.add('hide')
+    cardInfoContainer.classList.remove('hide')
 }
