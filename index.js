@@ -466,9 +466,27 @@ const inputToogle = document.querySelector('#toogle')
 const divGoogle = document.querySelector('#google-payment')
 const paymentMethodContainer = document.querySelector('.payment-method-container')
 const cardInfoContainer = document.querySelector('.card-info')
+const inputVisa = document.querySelector('#visa')
+const inputMastercard = document.querySelector('#mastercard')
+const inputPaypal = document.querySelector('#paypal')
+const inputGoogle = document.querySelector('#google')
+const cardInfoLogo = document.querySelector('#card-info_logo')
+const verificationBtn = document.querySelector('.verification_btn')
+const cardNumberInput = document.querySelector('#card-number')
+const cardholderNameInput = document.querySelector('#cardholder-name')
+const expDateMonthInput = document.querySelector('#exp-date_month')
+const expDateYearInput = document.querySelector('#exp-date_year')
+const cvvInput = document.querySelector('#CVV')
+
+let cardNumber
+let cardholderName
+let expDateMonth
+let expDateYear
+let cvv
 
 inputToogle.addEventListener('input',hideGoogle)
 continueBtn.addEventListener('click',fillCardInfo)
+verificationBtn.addEventListener('click', verifyCardInfo)
 
 function hideGoogle () {
     if(inputToogle.checked == false) {
@@ -481,4 +499,34 @@ function hideGoogle () {
 function fillCardInfo() {
     paymentMethodContainer.classList.add('hide')
     cardInfoContainer.classList.remove('hide')
+
+    if(inputVisa.checked == true) {
+        cardInfoLogo.src = inputVisa.nextSibling.nextSibling.childNodes[3].src
+    } else if(inputMastercard.checked == true) {
+        cardInfoLogo.src = inputMastercard.nextSibling.nextSibling.childNodes[3].src
+    } else if(inputPaypal.checked == true) {
+        cardInfoLogo.src = inputPaypal.nextSibling.nextSibling.childNodes[3].src
+    } else if(inputGoogle.checked == true) {
+        cardInfoLogo.src = inputGoogle.nextSibling.nextSibling.childNodes[3].src
+    }
+}
+
+function verifyCardInfo() {
+    if(cardNumberInput.value === "" || cardholderNameInput.value === "" || expDateMonthInput.value === "" || expDateYearInput.value === "" || cvvInput.value === "") {
+        alert('There is missing information. Please fill out all the fields')
+        return
+    } else if(cardNumberInput.value.length < cardNumberInput.maxLength) {
+        alert('Please check your card number, it seems incomplete')
+        return
+    } else if(cvvInput.value.length < cvvInput.maxLength) {
+        alert('Please check your CVV, it must be three digit long')
+        return
+    } else {
+        cardNumber = cardNumberInput.value
+        cardholderName = cardholderNameInput.value
+        expDateMonth = expDateMonthInput.value
+        expDateYear = expDateYearInput.value
+        cvv = cvvInput.value
+    }
+
 }

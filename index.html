@@ -259,49 +259,49 @@
                 <div class="toogle-container">
                     <input type="checkbox" id="toogle">
                     <label for="toogle" class="switchtoogle"></label>
-                    <p>Allow payments with google</p>
+                    <p>Allow payments with Google</p>
                 </div>
                 <button class="payment-method_btn">
                     <p>Continue</p>
                 </button>
             </div>
             <div class="card-info hide">
-                <img src="./assets/mastercard.svg" alt="">
+                <img src="" alt="" id="card-info_logo">
                 <div class="card-info-container">
                     <label for="card-number" class="card-info_label" id="card-number-label">Card Number</label>
-                    <input type="text" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" class="card-info_input">
+                    <input type="text" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" class="card-info_input" maxlength="16" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">
 
                     <label for="cardholder-name" class="card-info_label" id="cardholder-name-label">Carholder name</label>
                     <input type="text" id="cardholder-name" placeholder="Jane Doe" class="card-info_input">
 
-                    <label for="card-expiration-date" class="card-info_label" id="card-expiration-date_label">Expiration date</label>
+                    <label class="card-info_label" id="card-expiration-date_label">Expiration date</label>
                     <div id="expiration-date_selector">
-                        <select>
-                            <option value="01">January</option>
-                            <option value="02">February </option>
-                            <option value="03">March</option>
-                            <option value="04">April</option>
-                            <option value="05">May</option>
-                            <option value="06">June</option>
-                            <option value="07">July</option>
-                            <option value="08">August</option>
-                            <option value="09">September</option>
-                            <option value="10">October</option>
-                            <option value="11">November</option>
-                            <option value="12">December</option>
+                        <select id="exp-date_month">
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
                         </select>
                         <span>/</span>
-                        <select>
-                            <option value="23"> 2023</option>
-                            <option value="24"> 2024</option>
-                            <option value="25"> 2025</option>
-                            <option value="26"> 2026</option>
-                            <option value="27"> 2027</option>
-                            <option value="28"> 2028</option>
+                        <select id="exp-date_year">
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
                         </select>
                     </div>
-                    <label for="card-CVV" class="card-info_label" id="card-CVV_label">CVV</label>
-                    <input type="password" id="CVV" maxlength="3" class="card-info_input">
+                    <label for="CVV" class="card-info_label" id="card-CVV_label">CVV</label>
+                    <input type="password" id="CVV" maxlength="3" class="card-info_input" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">
                     <button class="verification_btn">
                         <p>Continue</p>
                     </button>
