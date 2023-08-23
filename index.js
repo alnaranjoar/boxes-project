@@ -471,12 +471,19 @@ const inputMastercard = document.querySelector('#mastercard')
 const inputPaypal = document.querySelector('#paypal')
 const inputGoogle = document.querySelector('#google')
 const cardInfoLogo = document.querySelector('#card-info_logo')
+const cardVerificationLogo = document.querySelector('#card-verification_logo')
 const verificationBtn = document.querySelector('.verification_btn')
 const cardNumberInput = document.querySelector('#card-number')
 const cardholderNameInput = document.querySelector('#cardholder-name')
 const expDateMonthInput = document.querySelector('#exp-date_month')
 const expDateYearInput = document.querySelector('#exp-date_year')
 const cvvInput = document.querySelector('#CVV')
+const cardVerification = document.querySelector('.card-verification')
+const spanCardNumber = document.querySelector('#card-verification_cardnumber')
+const spanCardholderName = document.querySelector('#card-verification_cardholdername')
+const addBtn = document.querySelector('.add-btn')
+const cardVerificationContainer = document.querySelector('.card-verification_container')
+const cardVerificationThanks = document.querySelector('.card-verification_thanks')
 
 let cardNumber
 let cardholderName
@@ -487,6 +494,7 @@ let cvv
 inputToogle.addEventListener('input',hideGoogle)
 continueBtn.addEventListener('click',fillCardInfo)
 verificationBtn.addEventListener('click', verifyCardInfo)
+addBtn.addEventListener('click', addPaymentMethod)
 
 function hideGoogle () {
     if(inputToogle.checked == false) {
@@ -502,12 +510,16 @@ function fillCardInfo() {
 
     if(inputVisa.checked == true) {
         cardInfoLogo.src = inputVisa.nextSibling.nextSibling.childNodes[3].src
+        cardVerificationLogo.src = inputVisa.nextSibling.nextSibling.childNodes[3].src
     } else if(inputMastercard.checked == true) {
         cardInfoLogo.src = inputMastercard.nextSibling.nextSibling.childNodes[3].src
+        cardVerificationLogo.src = inputMastercard.nextSibling.nextSibling.childNodes[3].src
     } else if(inputPaypal.checked == true) {
         cardInfoLogo.src = inputPaypal.nextSibling.nextSibling.childNodes[3].src
+        cardVerificationLogo.src = inputPaypal.nextSibling.nextSibling.childNodes[3].src
     } else if(inputGoogle.checked == true) {
         cardInfoLogo.src = inputGoogle.nextSibling.nextSibling.childNodes[3].src
+        cardVerificationLogo.src = inputGoogle.nextSibling.nextSibling.childNodes[3].src
     }
 }
 
@@ -527,6 +539,24 @@ function verifyCardInfo() {
         expDateMonth = expDateMonthInput.value
         expDateYear = expDateYearInput.value
         cvv = cvvInput.value
+        cardInfoContainer.classList.add('hide')
+        cardVerification.classList.remove('hide')
+        spanCardNumber.innerHTML = "XXXX-XXXX-XXXX-" + cardNumber.slice(cardNumber.length-4)
+        spanCardholderName.innerHTML = cardholderName
     }
+}
 
+function addPaymentMethod() {
+    cardVerificationContainer.classList.add('hide')
+    cardVerificationThanks.classList.remove('hide')
+    addBtn.classList.add('hide')
+    cardNumber = ''
+    cardholderName = ''
+    expDateMonth = ''
+    expDateYear = ''
+    cvv = ''
+    cardNumberInput.value = ''
+    cardholderNameInput.value = ''
+    expDateMonthInput.value = ''
+    expDateYearInput.value = ''
 }
