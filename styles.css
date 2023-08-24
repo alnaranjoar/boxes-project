@@ -160,7 +160,7 @@ body {
 .little-boxes {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 100px;
+    grid-template-rows: 100px 100px 1fr;
     gap: 80px;
     justify-items: end;
 }
@@ -386,6 +386,139 @@ body {
     font-size: 14px;
 }
 
+/* social media profile 1  */
+
+.socialmediaprofile {
+    background: white;
+    padding: 24px;
+    box-sizing: border-box;
+    width: 342px;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.socialmediaprofile-btn-container {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: flex;
+    gap: 10px;
+}
+
+.socialmediaprofile-btn {
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 12px;
+    padding: 0;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 15px 15px 40px -3px rgba(0,0,0,0.11);
+}
+
+.socialmediaprofile-container {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.socialmediaprofile-imgcontainer {
+    width: 150px;
+    height: 150px;
+}
+
+.socialmediaprofile-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 15px 15px 40px -3px rgba(0,0,0,0.11);
+}
+
+.socialmediaprofile-container > p:nth-child(2) {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+
+.socialmediaprofile-container > p:nth-child(3) {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 0;
+    color: gray;
+}
+
+.follows-container {
+    display: flex;
+    text-align: center;
+    gap: 30px;
+}
+
+.follows-container p span:first-child {
+    color: gray;
+}
+
+.follows-container p span:nth-child(3) {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+
+/* social media profile 2 */
+
+.socialmediaprofile2 {
+    background: white;
+    padding: 24px;
+    box-sizing: border-box;
+    width: 342px;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.socialmediaprofile2-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.socialmediaprofile2-imgcontainer {
+    width: 300px;
+    height: 300px;
+}
+
+.socialmediaprofile2-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 15px 15px 40px -3px rgba(0,0,0,0.11);
+}
+
+.socialmediaprofile2-container > p:nth-child(2) {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.socialmediaprofile2-container > p:nth-child(3) {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 0;
+    color: gray;
+}
+
+
+
 /* calendar */
 
 .painted {
@@ -516,7 +649,7 @@ body {
     }
 
     .little-boxes {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: none;
         width: 100vw;
         overflow-x: auto;
@@ -657,13 +790,14 @@ body {
 .payment-method {
     background-color: white;
     width: 412px;
-    height: 700px;
+    height: 770px;
     border-radius: 32px;
     padding: 24px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-self: center;
 }
 
 .payment-method-container {
@@ -761,11 +895,12 @@ body {
 }
 
 .toogle-container {
-    margin: 30px 0;
+    margin: 30px 0 15px 0;
     display: flex;
     gap: 10px;
     align-items: center;
 }
+
 .switchtoogle {
     width: 80px;
     height: 40px;
@@ -790,7 +925,7 @@ body {
 }
 
 #toogle:checked + .switchtoogle::after {
-    transform: translatex(40px);
+    transform: translatex(35px);
     background: white ;
 }
 
